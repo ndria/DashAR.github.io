@@ -20,7 +20,10 @@
     <body>
 
         <a class="home" href="../../">Home</a>
-        <a-scene embedded arjs='sourceType: webcam;'>
+        <a-scene vr-mode-ui="enabled: false;"
+        renderer="logarithmicDepthBuffer: true;"
+        embedded
+        arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
             
             <a-entity charts="type: bubble; dataPoints: ../data/dataPositive.json"></a-entity>
 
