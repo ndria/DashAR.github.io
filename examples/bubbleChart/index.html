@@ -24,10 +24,9 @@
         renderer="logarithmicDepthBuffer: true;"
         embedded
         arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
-            
+        <a-marker-camera preset='hiro'>            
             <a-entity charts="type: bubble; dataPoints: ../data/dataPositive.json"></a-entity>
-
-            <a-entity camera></a-entity>
+        </a-marker-camera>
         </a-scene>
 
     </body>
