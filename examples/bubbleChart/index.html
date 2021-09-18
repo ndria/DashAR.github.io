@@ -20,7 +20,7 @@
     <body>
 
         <a class="home" href="../../">Home</a>
-        <a-scene background="color: grey">
+        <a-scene embedded arjs='sourceType: webcam;'>
             <a-light type="point" intensity="1" position="-2 10 10"></a-light>
             <a-entity charts="type: bubble; dataPoints: ../data/dataPositive.json"></a-entity>
 
