@@ -18,10 +18,16 @@
             }
         </style>
     </head>
-    <body style='margin : 0px; overflow: hidden;'>
-        <a-scene embedded arjs='sourceType: webcam;'>
-           <a-text text="value: Whatever \n you want !" color="blue"    rotation="-90 0 0"></a-text>
-           <a-marker-camera preset='hiro'></a-marker-camera>
+    <body>
+
+        <a-scene vr-mode-ui="enabled: false;"
+        renderer="logarithmicDepthBuffer: true;"
+        embedded
+        arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
+        <a-marker-camera preset='hiro'>            
+            <a-entity charts="type: bubble; dataPoints: ../data/dataPositive.json" scale="0.2 0.2 0.2"></a-entity>
+        </a-marker-camera>
         </a-scene>
-     </body>
+
+    </body>
 </html>
