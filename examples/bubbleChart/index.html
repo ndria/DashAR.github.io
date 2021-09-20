@@ -23,9 +23,24 @@
 
         <a-scene webxr="optionalFeatures: hit-test, dom-overlay; overlayElement:#overlay;" physics="debug: false">
                   
-            
+            <a-entity charts="type: bubble; dataPoints: ../data/dataPositive.json" scale="0.2 0.2 0.2"></a-entity>
+            <a-entity ar-hit-test="doHitTest:false" visible="false">
+				<a-plane
+					rotation="-90 0 0"
+					width="0.2"
+					height="0.2"
+					src="./arrow.png"
+					material="transparent:true;"
+				></a-plane>
+			</a-entity>
             <a-camera>
-                <a-entity charts="type: bubble; dataPoints: ../data/dataPositive.json" scale="0.2 0.2 0.2"></a-entity>	
+				<a-entity
+					id="text"
+					text="value: Hello World; align: left; width: 0.1;"
+					position="0 0 -0.17;"
+					visible="false"
+				>
+				</a-entity>
 			</a-camera>
         </a-scene>
 
